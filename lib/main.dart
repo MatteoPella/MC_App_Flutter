@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
     title: 'La mia app',
     theme: ThemeData(
       //primaryColor: const Color(0xFFff6369),
-      backgroundColor: const Color(0x000000ff)
+      //backgroundColor: const Color(0x000000ff)
+      scaffoldBackgroundColor: const Color(0xFF3679D4)
     ),
     routes: routing(),
     home: const HomePage(),

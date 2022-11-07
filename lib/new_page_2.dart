@@ -63,7 +63,7 @@ class _NewPage2State extends State<NewPage2>
 
     return Scaffold(
 
-      backgroundColor: Colors.lightBlue,
+      //backgroundColor: Colors.lightBlue,
 
       body: Center(
         child: Column(

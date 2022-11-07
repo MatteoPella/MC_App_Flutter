@@ -63,7 +63,7 @@ class _NewPageState extends State<NewPage>
 
     return Scaffold(
 
-      backgroundColor: Colors.lightGreen.withOpacity(0.5),
+      //backgroundColor: Colors.lightGreen.withOpacity(0.5),
 
       body: Center(
         child: Column(

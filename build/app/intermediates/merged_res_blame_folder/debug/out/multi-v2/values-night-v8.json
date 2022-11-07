@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/matteo/StudioProjects/nuova_prova_1/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/mpella/Documenti/MC_App_Flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/matteo/StudioProjects/nuova_prova_1/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/mpella/Documenti/MC_App_Flutter/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

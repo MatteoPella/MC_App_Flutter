@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) => Scaffold(
 
-    backgroundColor: Colors.lightGreen,
+    //backgroundColor: Colors.lightGreen,
 
     body: SingleChildScrollView(
 
@@ -107,8 +107,13 @@ class _HomePageState extends State<HomePage> {
           ),
 
           const SizedBox(height: 50),
-
+          const Spacer(),
           ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.black87),
+              padding: MaterialStateProperty.all(const EdgeInsets.all(50)),
+              textStyle: MaterialStateProperty.all(const TextStyle(fontSize: 30))),
+
             onPressed: () {
               String h = c;
               //Article article = Article(c);

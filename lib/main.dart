@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
+import 'home_page2.dart';
 import 'new_page.dart';
 import 'new_page_2.dart';
 import 'new_page_3.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(
       //primaryColor: const Color(0xFFff6369),
       //backgroundColor: const Color(0x000000ff)
-      scaffoldBackgroundColor: const Color(0xFF3679D4)
+      //scaffoldBackgroundColor: const Color(0xFF3679D4)
     ),
     routes: routing(),
     home: const HomePage(),

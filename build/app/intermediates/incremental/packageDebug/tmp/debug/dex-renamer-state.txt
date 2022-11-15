@@ -1,4 +1,4 @@
-#Sun Nov 13 19:43:11 CET 2022
+#Tue Nov 15 14:39:22 CET 2022
 base.0=/home/mpella/Documenti/MC_App_Flutter/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

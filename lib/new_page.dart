@@ -107,7 +107,6 @@ class _NewPageState extends State<NewPage>
                       borderRadius: BorderRadius.circular(50))),
               onPressed: roll,
               child: const Text(
-
                 'Roll',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),

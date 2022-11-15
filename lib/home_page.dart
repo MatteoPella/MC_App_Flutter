@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
               iconSize: 350,
               icon: Image.asset(bottoneInizia),
               onPressed: () {
-                Navigator.pushNamed(context, '/new_page');
+                Navigator.pushNamed(context, '/categorie');
               },
             ),
           ),

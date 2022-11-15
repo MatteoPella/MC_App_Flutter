@@ -31,10 +31,29 @@ class Categorie extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/new_page');
+                  Navigator.pushNamed(context, '/pag_categoria1');
                 },
                 child: const Text(
                   'Categoria1',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+              ),
+            ),
+
+            Positioned(
+              left: 100, //MediaQuery.of(context).size.width/3,
+              top: 100, //MediaQuery.of(context).size.height/2,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black87,
+                    fixedSize: const Size(200, 50),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50))),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/home_page');
+                },
+                child: const Text(
+                  'Indietro',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ),

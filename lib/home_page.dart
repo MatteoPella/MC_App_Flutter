@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 const backgroundImage = 'assets/images/GUESS_the_image3.png';
 const bottoneInizia = 'assets/images/bottone.png';
-const bottoneInizia2 = 'assets/images/bottone2.png';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -38,25 +37,18 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
-          /*IconButton(
-            splashRadius: 100,
-            iconSize: 200,
-            icon: Image.asset(bottoneInizia),
-            onPressed: () {  },
-          ),*/
-
-          /*
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            /*child: IconButton(
-              splashRadius: 100,
+          Positioned(
+            left: 0, //MediaQuery.of(context).size.width/3,
+            top: 670, //MediaQuery.of(context).size.height/2,
+            child: IconButton(
+              //splashRadius: 100,
               iconSize: 100,
-              icon: Image.asset(bottoneInizia),
-              onPressed: () {  },
-            ),*/
+              icon: Image.asset('assets/images/regolamento.png'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/regolamento');
+              },
+            ),
           ),
-          */
 
         ],
       ),

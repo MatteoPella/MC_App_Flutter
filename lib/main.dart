@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nuova_prova_1/categorie.dart';
+import 'package:nuova_prova_1/regolamento.dart';
+import 'package:nuova_prova_1/timer_categoria1.dart';
 import 'home_page.dart';
 import 'home_page2.dart';
-import 'new_page.dart';
+import 'pag_categoria1.dart';
 import 'new_page_2.dart';
 import 'new_page_3.dart';
 
@@ -31,8 +33,10 @@ class MyApp extends StatelessWidget {
   Map<String, WidgetBuilder> routing(){
     return {
       '/home_page': (context) => const HomePage(),
+      '/regolamento': (context) => const Regolamento(),
       '/categorie': (context) => const Categorie(),
-      '/new_page': (context) => const NewPage(),
+      '/pag_categoria1': (context) => const PagCategoria1(),
+      '/timer_categoria1': (context) => const TimerCategoria1(),
       '/new_page_2': (context) => const NewPage2(),
       '/new_page_3': (context) => const NewPage3(),
     };

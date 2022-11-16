@@ -158,6 +158,73 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                 ),
 
 
+
+                Positioned(
+                  top: 550,
+                  left: 250,
+                  child: GestureDetector(
+                    onTap: () {
+                      if (controller.isAnimating) {
+                        controller.stop();
+                        setState(() {
+                          isPlaying = false;
+                        });
+                      } else {
+                        controller.reverse(
+                            from: controller.value == 0 ? 1.0 : controller.value);
+                        setState(() {
+                          isPlaying = true;
+                        });
+                      }
+                    },
+                    child: RoundButton(
+                      icon: isPlaying == true ? Icons.pause : Icons.play_arrow,
+                    ),
+                  ),
+                ),
+
+
+                Positioned(
+                  top: 550,
+                  child: GestureDetector(
+                    onTap: () {
+                      controller.reset();
+                      setState(() {
+                        isPlaying = false;
+                      });
+                    },
+                    child: const RoundButton(
+                      icon: Icons.stop,
+                    ),
+                  ),
+                ),
+
+
+                Positioned(
+                  top: 650,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      showAlertDialog(context);
+                    },
+                    child: const Text(
+                      'Fine',
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ),
+                ),
+
+
+
+
+
+
+
+
+
+
+
+
+
                 SizedBox(
                   width: 300,
                   height: 300,
@@ -197,9 +264,24 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                     ),
                   ),
                 ),
+
+
+
+
+
+
+
+
+
+
               ],
             ),
           ),
+
+
+
+
+          /*
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
             child: Row(
@@ -225,6 +307,7 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                     icon: isPlaying == true ? Icons.pause : Icons.play_arrow,
                   ),
                 ),
+
                 GestureDetector(
                   onTap: () {
                     controller.reset();
@@ -250,6 +333,10 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
               ],
             ),
           )
+          */
+
+
+
         ],
       ),
     );

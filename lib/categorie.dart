@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Categorie extends StatelessWidget {
   const Categorie({super.key});
@@ -7,6 +8,7 @@ class Categorie extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(
+          alignment: Alignment.center,
           children: [
 
 
@@ -22,20 +24,121 @@ class Categorie extends StatelessWidget {
 
 
             Positioned(
-              left: 100, //MediaQuery.of(context).size.width/3,
-              top: 520, //MediaQuery.of(context).size.height/2,
+              //left: 100, //MediaQuery.of(context).size.width/3,
+              top: 200, //MediaQuery.of(context).size.height/2,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black87,
-                    fixedSize: const Size(200, 50),
+                  backgroundColor: Colors.black87.withOpacity(0),
+                  //backgroundColor: Colors.black87,
+                  side: const BorderSide(
+                    width: 3.0,
+                    color: Colors.black45,
+                  ),
+                  fixedSize: const Size(300, 80),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50))),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/pag_categoria1');
+                },
+                child: Text(
+                  'CARTOON',
+                  style: GoogleFonts.peralta(fontSize: 35, color: Colors.black, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+
+            Positioned(
+              //left: 100, //MediaQuery.of(context).size.width/3,
+              top: 310, //MediaQuery.of(context).size.height/2,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black87.withOpacity(0),
+                    //backgroundColor: Colors.black87,
+                    side: const BorderSide(
+                      width: 3.0,
+                      color: Colors.black45,
+                    ),
+                    fixedSize: const Size(300, 80),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
                   Navigator.pushNamed(context, '/pag_categoria1');
                 },
-                child: const Text(
-                  'Categoria1',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                child: Text(
+                  'SPORT',
+                  style: GoogleFonts.peralta(fontSize: 35, color: Colors.black, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+
+            Positioned(
+              //left: 100, //MediaQuery.of(context).size.width/3,
+              top: 420, //MediaQuery.of(context).size.height/2,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black87.withOpacity(0),
+                    //backgroundColor: Colors.black87,
+                    side: const BorderSide(
+                      width: 3.0,
+                      color: Colors.black45,
+                    ),
+                    fixedSize: const Size(300, 80),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50))),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/pag_categoria1');
+                },
+                child: Text(
+                  'FILM',
+                  style: GoogleFonts.peralta(fontSize: 35, color: Colors.black, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+
+            Positioned(
+              //left: 100, //MediaQuery.of(context).size.width/3,
+              top: 530, //MediaQuery.of(context).size.height/2,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black87.withOpacity(0),
+                    //backgroundColor: Colors.black87,
+                    side: const BorderSide(
+                      width: 3.0,
+                      color: Colors.black45,
+                    ),
+                    fixedSize: const Size(300, 80),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50))),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/pag_categoria1');
+                },
+                child: Text(
+                  'OGGETTI',
+                  style: GoogleFonts.peralta(fontSize: 35, color: Colors.black, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+
+            Positioned(
+              //left: 100, //MediaQuery.of(context).size.width/3,
+              top: 640, //MediaQuery.of(context).size.height/2,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black87.withOpacity(0),
+                    //backgroundColor: Colors.black87,
+                    side: const BorderSide(
+                      width: 3.0,
+                      color: Colors.black45,
+                    ),
+                    fixedSize: const Size(300, 80),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50))),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/pag_categoria1');
+                },
+                child: Text(
+                  'ANIMALI',
+                  style: GoogleFonts.peralta(fontSize: 35, color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               ),
             ),

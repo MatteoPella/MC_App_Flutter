@@ -34,7 +34,7 @@ class Categorie extends StatelessWidget {
                     width: 3.0,
                     color: Colors.black45,
                   ),
-                  fixedSize: const Size(300, 80),
+                  fixedSize: const Size(350, 80),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
@@ -42,7 +42,7 @@ class Categorie extends StatelessWidget {
                 },
                 child: Text(
                   'CARTOON',
-                  style: GoogleFonts.peralta(fontSize: 35, color: Colors.black, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.peralta(fontSize: 50, color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -58,7 +58,7 @@ class Categorie extends StatelessWidget {
                       width: 3.0,
                       color: Colors.black45,
                     ),
-                    fixedSize: const Size(300, 80),
+                    fixedSize: const Size(350, 80),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
@@ -66,7 +66,7 @@ class Categorie extends StatelessWidget {
                 },
                 child: Text(
                   'SPORT',
-                  style: GoogleFonts.peralta(fontSize: 35, color: Colors.black, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.peralta(fontSize: 50, color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -82,7 +82,7 @@ class Categorie extends StatelessWidget {
                       width: 3.0,
                       color: Colors.black45,
                     ),
-                    fixedSize: const Size(300, 80),
+                    fixedSize: const Size(350, 80),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
@@ -90,7 +90,7 @@ class Categorie extends StatelessWidget {
                 },
                 child: Text(
                   'FILM',
-                  style: GoogleFonts.peralta(fontSize: 35, color: Colors.black, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.peralta(fontSize: 50, color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -106,7 +106,7 @@ class Categorie extends StatelessWidget {
                       width: 3.0,
                       color: Colors.black45,
                     ),
-                    fixedSize: const Size(300, 80),
+                    fixedSize: const Size(350, 80),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
@@ -114,7 +114,7 @@ class Categorie extends StatelessWidget {
                 },
                 child: Text(
                   'OGGETTI',
-                  style: GoogleFonts.peralta(fontSize: 35, color: Colors.black, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.peralta(fontSize: 50, color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -130,7 +130,7 @@ class Categorie extends StatelessWidget {
                       width: 3.0,
                       color: Colors.black45,
                     ),
-                    fixedSize: const Size(300, 80),
+                    fixedSize: const Size(350, 80),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
@@ -138,7 +138,7 @@ class Categorie extends StatelessWidget {
                 },
                 child: Text(
                   'ANIMALI',
-                  style: GoogleFonts.peralta(fontSize: 35, color: Colors.black, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.peralta(fontSize: 50, color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               ),
             ),

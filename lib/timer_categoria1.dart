@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nuova_prova_1/home_page.dart';
 import 'package:nuova_prova_1/round_button.dart';
 
 
@@ -138,10 +139,29 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
 
           Expanded(
             child: Stack(
+
               alignment: Alignment.center,
               children: [
 
 
+                Opacity(
+                  opacity: 0.7,
+                  child: Image.asset(
+                    "assets/images/GUESS_the_image_clean.png",
+                    height: MediaQuery
+                        .of(context)
+                        .size
+                        .height,
+                    width: MediaQuery
+                        .of(context)
+                        .size
+                        .width,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+
+
+                /*
                 Positioned(
                   child: Image.asset(
                     'assets/images/GUESS_the_image_clean.png',
@@ -157,10 +177,12 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                   ),
                 ),
 
+                 */
+
 
 
                 Positioned(
-                  top: 550,
+                  top: 620,
                   left: 250,
                   child: GestureDetector(
                     onTap: () {
@@ -185,7 +207,7 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
 
 
                 Positioned(
-                  top: 550,
+                  top: 620,
                   child: GestureDetector(
                     onTap: () {
                       controller.reset();
@@ -201,7 +223,7 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
 
 
                 Positioned(
-                  top: 650,
+                  top: 700,
                   child: ElevatedButton(
                     onPressed: () {
                       showAlertDialog(context);
@@ -225,15 +247,70 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
 
 
 
-                SizedBox(
-                  width: 300,
-                  height: 300,
+
+                Positioned(
+                  //top: 100,
+                  width: 350,
+                  height: 350,
                   child: CircularProgressIndicator(
-                    backgroundColor: Colors.grey.shade300,
+                    color: Colors.black,
+                    //backgroundColor: Colors.red,
                     value: progress,
-                    strokeWidth: 6,
+                    strokeWidth: 12,
                   ),
                 ),
+
+
+
+                Positioned(
+                  top: 100,
+                  child: GestureDetector(
+                  onTap: () {
+                    if (controller.isDismissed) {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) => SizedBox(
+                          height: 300,
+                          child: CupertinoTimerPicker(
+                            initialTimerDuration: controller.duration!,
+                            onTimerDurationChanged: (time) {
+                              setState(() {
+                                controller.duration = time;
+                              });
+                            },
+                          ),
+                        ),
+                      );
+                    }
+                  },
+                  child: AnimatedBuilder(
+                    animation: controller,
+                    builder: (context, child) => Text(
+                      countText,
+                      style: const TextStyle(
+                        fontSize: 100,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                ),
+
+
+
+                AnimatedBuilder(
+                  animation: controller,
+                  builder: (context, child) => Text(
+                    countText,
+                    style: const TextStyle(
+                      fontSize: 90,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+
+
+                /*
                 GestureDetector(
                   onTap: () {
                     if (controller.isDismissed) {
@@ -258,12 +335,13 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                     builder: (context, child) => Text(
                       countText,
                       style: const TextStyle(
-                        fontSize: 60,
+                        fontSize: 70,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                 ),
+                */
 
 
 

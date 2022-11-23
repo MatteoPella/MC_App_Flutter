@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+import 'package:google_fonts/google_fonts.dart';
+
 class PagCategoria1 extends StatefulWidget {
   const PagCategoria1({Key? key}) : super(key: key);
 
@@ -10,8 +12,8 @@ class PagCategoria1 extends StatefulWidget {
 
 class _PagCategoria1State extends State<PagCategoria1>
     with SingleTickerProviderStateMixin {
-  int x = 1;
-  int y = 1;
+  int x = Random().nextInt(3) + 1;
+  //int y = 1;
   late AnimationController _controller;
   late CurvedAnimation animation;
 
@@ -40,8 +42,8 @@ class _PagCategoria1State extends State<PagCategoria1>
     animation.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         setState(() {
-          x = Random().nextInt(2) + 1;
-          y = Random().nextInt(2) + 1;
+          x = Random().nextInt(3) + 1;
+          //y = Random().nextInt(2) + 1;
         });
         // print('Completed');
         _controller.reverse();
@@ -68,6 +70,7 @@ class _PagCategoria1State extends State<PagCategoria1>
       //backgroundColor: Colors.lightGreen.withOpacity(0.5),
 
       body: Stack(
+        alignment: Alignment.center,
         children: [
 
 
@@ -84,11 +87,11 @@ class _PagCategoria1State extends State<PagCategoria1>
 
 
           Positioned(
-            left: 50, //MediaQuery.of(context).size.width/3,
+            //left: 50, //MediaQuery.of(context).size.width/3,
             top: 200, //MediaQuery.of(context).size.height/2,
             child: Image(height:300- (animation.value)*200,
               image: AssetImage(
-                  'assets/images/$x.png'
+                  'assets/images/$x.jpg'
               ),
             ),
           ),
@@ -96,6 +99,7 @@ class _PagCategoria1State extends State<PagCategoria1>
 
 
 
+          /*
           Positioned(
             left: 100, //MediaQuery.of(context).size.width/3,
             top: 520, //MediaQuery.of(context).size.height/2,
@@ -109,6 +113,36 @@ class _PagCategoria1State extends State<PagCategoria1>
               child: const Text(
                 'Roll',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              ),
+            ),
+          ),
+
+           */
+
+          Positioned(
+            //left: 100, //MediaQuery.of(context).size.width/3,
+            top: 510, //MediaQuery.of(context).size.height/2,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black87.withOpacity(0),
+                  //backgroundColor: Colors.black87,
+                  side: const BorderSide(
+                    width: 3.0,
+                    color: Colors.black45,
+                  ),
+                  fixedSize: const Size(250, 70),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(0))),
+              onPressed: () {
+                roll();
+              },
+              child: Text(
+                'ROLL',
+                style: GoogleFonts.peralta(
+                  fontSize: 40,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
@@ -129,6 +163,22 @@ class _PagCategoria1State extends State<PagCategoria1>
               child: const Text(
                 'Avanti',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              ),
+            ),
+          ),
+
+
+          Positioned(
+            left: 0,
+            top: 80,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/categorie');
+              },
+              icon: const Icon(
+                Icons.arrow_circle_left_rounded,
+                size: 70,
+                color: Colors.black,
               ),
             ),
           ),

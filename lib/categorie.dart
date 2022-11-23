@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Categorie extends StatelessWidget {
@@ -144,8 +145,28 @@ class Categorie extends StatelessWidget {
             ),
 
             Positioned(
-              left: 100, //MediaQuery.of(context).size.width/3,
-              top: 100, //MediaQuery.of(context).size.height/2,
+              left: 0,
+              top: 80,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/home_page');
+                },
+                icon: const Icon(
+                  Icons.arrow_circle_left_rounded,
+                  size: 70,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+
+
+
+
+
+            /*
+            Positioned(
+              left: 10, //MediaQuery.of(context).size.width/3,
+              top: 150, //MediaQuery.of(context).size.height/2,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black87,
@@ -161,6 +182,7 @@ class Categorie extends StatelessWidget {
                 ),
               ),
             ),
+            */
 
 
           ]

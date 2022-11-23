@@ -22,14 +22,14 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
   String get countText {
     Duration count = controller.duration! * controller.value;
     return controller.isDismissed
-        ? '${controller.duration!.inHours}:${(controller.duration!.inMinutes % 60).toString().padLeft(2, '0')}:${(controller.duration!.inSeconds % 60).toString().padLeft(2, '0')}'
-        : '${count.inHours}:${(count.inMinutes % 60).toString().padLeft(2, '0')}:${(count.inSeconds % 60).toString().padLeft(2, '0')}';
+        ? '${(controller.duration!.inMinutes % 60).toString().padLeft(2, '0')}:${(controller.duration!.inSeconds % 60).toString().padLeft(2, '0')}'
+        : '${(count.inMinutes % 60).toString().padLeft(2, '0')}:${(count.inSeconds % 60).toString().padLeft(2, '0')}';
   }
 
   double progress = 1.0;
 
   void notify() {
-    if (countText == '0:00:00') {
+    if (countText == '00:00') {
       //FlutterRingtonePlayer.playNotification();
     }
   }
@@ -129,7 +129,7 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
 
     RouteSettings settings = ModalRoute.of(context)!.settings;
     //article = settings.arguments as Article;
-    String t = settings.arguments.toString();
+    //String t = settings.arguments.toString();
 
     return Scaffold(
       backgroundColor: const Color(0xfff5fbff),
@@ -303,11 +303,31 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                   builder: (context, child) => Text(
                     countText,
                     style: const TextStyle(
-                      fontSize: 90,
+                      fontSize: 100,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
+
+
+
+
+
+                Positioned(
+                  left: 0,
+                  top: 40,
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/pag_categoria1');
+                    },
+                    icon: const Icon(
+                      Icons.arrow_circle_left_rounded,
+                      size: 70,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+
 
 
                 /*

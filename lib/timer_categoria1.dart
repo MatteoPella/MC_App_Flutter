@@ -39,7 +39,7 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
     super.initState();
     controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 60),
+      duration: const Duration(seconds: 180),
     );
 
     controller.addListener(() {
@@ -183,7 +183,7 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
 
                 Positioned(
                   top: 620,
-                  left: 250,
+                  left: 200,
                   child: GestureDetector(
                     onTap: () {
                       if (controller.isAnimating) {
@@ -199,8 +199,9 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                         });
                       }
                     },
-                    child: RoundButton(
-                      icon: isPlaying == true ? Icons.pause : Icons.play_arrow,
+                    child: Icon(
+                      isPlaying == true ? Icons.pause : Icons.play_arrow,
+                      size: 80,
                     ),
                   ),
                 ),
@@ -208,6 +209,7 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
 
                 Positioned(
                   top: 620,
+                  left: 120,
                   child: GestureDetector(
                     onTap: () {
                       controller.reset();
@@ -215,13 +217,19 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                         isPlaying = false;
                       });
                     },
-                    child: const RoundButton(
-                      icon: Icons.stop,
+                    child:  const Icon(
+                      Icons.stop,
+                      size: 80,
                     ),
+
+                    //child: const RoundButton(
+                      //icon: Icons.stop,
+                    //),
                   ),
                 ),
 
 
+                /*
                 Positioned(
                   top: 700,
                   child: ElevatedButton(
@@ -234,6 +242,8 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                     ),
                   ),
                 ),
+
+                 */
 
 
 
@@ -367,6 +377,37 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
 
 
 
+                Positioned(
+                  left: 0,
+                  top: 700,
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/home_page');
+                    },
+                    icon: const Icon(
+                      Icons.home,
+                      size: 70,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+
+
+                Positioned(
+                  left: 300,
+                  top: 700,
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/categorie');
+                    },
+                    icon: const Icon(
+                      Icons.restart_alt_rounded,
+                      size: 70,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+
 
 
 
@@ -432,6 +473,13 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
             ),
           )
           */
+
+
+
+
+
+
+
 
 
 

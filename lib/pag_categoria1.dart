@@ -148,6 +148,8 @@ class _PagCategoria1State extends State<PagCategoria1>
           ),
 
 
+
+          /*
           Positioned(
             left: 100,
             top: 700,
@@ -167,6 +169,12 @@ class _PagCategoria1State extends State<PagCategoria1>
             ),
           ),
 
+           */
+
+
+
+
+
 
           Positioned(
             left: 0,
@@ -177,6 +185,21 @@ class _PagCategoria1State extends State<PagCategoria1>
               },
               icon: const Icon(
                 Icons.arrow_circle_left_rounded,
+                size: 70,
+                color: Colors.black,
+              ),
+            ),
+          ),
+
+          Positioned(
+            left: 300,
+            top: 650,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/timer_categoria1');
+              },
+              icon: const Icon(
+                Icons.arrow_circle_right_rounded,
                 size: 70,
                 color: Colors.black,
               ),

@@ -146,14 +146,14 @@ class Categorie extends StatelessWidget {
 
             Positioned(
               left: 0,
-              top: 80,
+              top: 60,
               child: IconButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/home_page');
                 },
                 icon: const Icon(
-                  Icons.arrow_circle_left_rounded,
-                  size: 70,
+                  Icons.home,
+                  size: 50,
                   color: Colors.black,
                 ),
               ),

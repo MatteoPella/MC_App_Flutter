@@ -341,7 +341,7 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
 
                 Positioned(
                   left: 0,
-                  top: 40,
+                  top: 50,
                   child: IconButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/pag_categoria1');

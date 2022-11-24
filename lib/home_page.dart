@@ -28,6 +28,9 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
+
+
+          /*
           Positioned(
             left: 0, //MediaQuery.of(context).size.width/3,
             top: 350, //MediaQuery.of(context).size.height/2,
@@ -40,6 +43,7 @@ class HomePage extends StatelessWidget {
               },
             ),
           ),
+          */
 
 
 
@@ -47,8 +51,7 @@ class HomePage extends StatelessWidget {
 
 
           Positioned(
-            //left: 100, //MediaQuery.of(context).size.width/3,
-            top: 580, //MediaQuery.of(context).size.height/2,
+            top: 500,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white.withOpacity(0.7),
@@ -78,7 +81,7 @@ class HomePage extends StatelessWidget {
 
           Positioned(
             left: 0,
-            top: 670,
+            top: 700,
             child: Container(
               width: 120,
               height: 120,

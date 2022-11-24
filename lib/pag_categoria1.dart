@@ -88,10 +88,34 @@ class _PagCategoria1State extends State<PagCategoria1>
 
 
 
+
           Positioned(
-            //left: 50, //MediaQuery.of(context).size.width/3,
+            top: 180,
+            child: Container(
+              width: 300,
+              height: 450,
+              decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0),
+                  shape: BoxShape.rectangle,
+                  boxShadow: [
+                    const BoxShadow(
+                        offset: Offset(10, 10),
+                        color: Colors.black38,
+                        blurRadius: 15),
+                    BoxShadow(
+                        offset: const Offset(-10, -10),
+                        color: Colors.white.withOpacity(0.6),
+                        blurRadius: 15)
+                  ]),
+              //child: null,
+            ),
+          ),
+
+
+
+          Positioned(
             top: 200, //MediaQuery.of(context).size.height/2,
-            child: Image(height:300- (animation.value)*200,
+            child: Image(height:400- (animation.value)*200,
               image: AssetImage(
                   'assets/images/$x.jpg'
               ),
@@ -100,30 +124,9 @@ class _PagCategoria1State extends State<PagCategoria1>
 
 
 
-
-          /*
-          Positioned(
-            left: 100, //MediaQuery.of(context).size.width/3,
-            top: 520, //MediaQuery.of(context).size.height/2,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black87,
-                  fixedSize: const Size(200, 50),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50))),
-              onPressed: roll,
-              child: const Text(
-                'Roll',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-              ),
-            ),
-          ),
-
-           */
-
           Positioned(
             //left: 100, //MediaQuery.of(context).size.width/3,
-            top: 510, //MediaQuery.of(context).size.height/2,
+            top: 650, //MediaQuery.of(context).size.height/2,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white.withOpacity(0.7),
@@ -182,7 +185,7 @@ class _PagCategoria1State extends State<PagCategoria1>
 
           Positioned(
             left: 0,
-            top: 650,
+            top: 50,
             child: Container(
               width: 90,
               height: 90,
@@ -216,7 +219,7 @@ class _PagCategoria1State extends State<PagCategoria1>
 
           Positioned(
             left: 300,
-            top: 650,
+            top: 50,
             child: Container(
               width: 90,
               height: 90,
@@ -251,62 +254,6 @@ class _PagCategoria1State extends State<PagCategoria1>
         ],
       ),
 
-
-
-      /*
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-
-            Row(
-              children: [
-                Expanded(
-                  child: GestureDetector(
-                    onDoubleTap: roll,
-                    child: Padding(
-                      padding: const EdgeInsets.all(15),
-                      child: Image(height:200- (animation.value)*200,
-                        image: AssetImage(
-                            'assets/images/$x.png'),
-                      ),
-                    ),
-                  ),
-                ),
-
-              ],
-            ),
-            ElevatedButton(
-              onPressed: roll,
-              child: const Text(
-                'Roll',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-            ),
-
-            /*
-            ElevatedButton(
-              onPressed: () {
-                //Navigator.pop(context);
-                //Navigator.pushNamed(context, '/new_page_2', arguments: t);
-                Navigator.pushNamed(context, '/new_page_2');
-              },
-              child:  Text(t),
-            ),
-
-             */
-
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/new_page_2');
-                //Navigator.pushNamed(context, '/new_page_2');
-              }, child: const Text('ooooo'),
-            ),
-
-          ],
-        ),
-      ),
-      */
 
     );
   }

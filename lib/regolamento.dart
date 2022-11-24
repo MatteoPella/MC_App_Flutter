@@ -27,30 +27,33 @@ class Regolamento extends StatelessWidget {
           ),
 
           Positioned(
-            //left: 100, //MediaQuery.of(context).size.width/3,
-            //top: 520, //MediaQuery.of(context).size.height/2,
-            top: 100,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-              //elevation: 0,
-              //backgroundColor: Colors.white.withOpacity(0),
-              backgroundColor: Colors.black87.withOpacity(0),
-              //backgroundColor: Colors.black87,
-              //backgroundColor: Colors.transparent,
-              side: const BorderSide(
-                width: 3.0,
-                color: Colors.black45,
-              ),
-              //fixedSize: const Size(200, 50),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50))),
-              onPressed: () {
-                Navigator.pushNamed(context, '/home_page');
-              },
-              child: Text(
-                'INDIETRO',
-                style: GoogleFonts.peralta(fontSize: 35, color: Colors.black, fontWeight: FontWeight.bold),
-                //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45, color: Colors.black, fontFamily: 'RaleWay'),
+            left: 0,
+            top: 60,
+            child: Container(
+              width: 90,
+              height: 90,
+              decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0),
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    const BoxShadow(
+                        offset: Offset(10, 10),
+                        color: Colors.black38,
+                        blurRadius: 15),
+                    BoxShadow(
+                        offset: const Offset(-10, -10),
+                        color: Colors.white.withOpacity(0.6),
+                        blurRadius: 15)
+                  ]),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/home_page');
+                },
+                icon: const Icon(
+                  Icons.arrow_circle_left_outlined,
+                  size: 70,
+                  color: Colors.black,
+                ),
               ),
             ),
           ),

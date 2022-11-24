@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nuova_prova_1/categorie.dart';
 import 'package:nuova_prova_1/regolamento.dart';
 import 'package:nuova_prova_1/timer_categoria1.dart';
+import 'package:nuova_prova_1/timer_categoria2.dart';
 import 'home_page.dart';
 import 'home_page2.dart';
 import 'pag_categoria1.dart';
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
       '/categorie': (context) => const Categorie(),
       '/pag_categoria1': (context) => const PagCategoria1(),
       '/timer_categoria1': (context) => const TimerCategoria1(),
+      '/timer_categoria2': (context) => const TimerCategoria2(),
       '/new_page_2': (context) => const NewPage2(),
       '/new_page_3': (context) => const NewPage3(),
     };

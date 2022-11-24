@@ -77,7 +77,9 @@ class _PagCategoria1State extends State<PagCategoria1>
           Positioned(
             top: 0,
             child: Image.asset(
-              backgroundImage,
+              'assets/images/sfondo.jpg',
+              color: Colors.white.withOpacity(0.7),
+              colorBlendMode: BlendMode.modulate,
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
@@ -124,7 +126,7 @@ class _PagCategoria1State extends State<PagCategoria1>
             top: 510, //MediaQuery.of(context).size.height/2,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black87.withOpacity(0),
+                  backgroundColor: Colors.white.withOpacity(0.7),
                   //backgroundColor: Colors.black87,
                   side: const BorderSide(
                     width: 3.0,
@@ -176,32 +178,70 @@ class _PagCategoria1State extends State<PagCategoria1>
 
 
 
+
+
           Positioned(
             left: 0,
-            top: 80,
-            child: IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/categorie');
-              },
-              icon: const Icon(
-                Icons.arrow_circle_left_rounded,
-                size: 70,
-                color: Colors.black,
+            top: 650,
+            child: Container(
+              width: 90,
+              height: 90,
+              decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0),
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    const BoxShadow(
+                        offset: Offset(10, 10),
+                        color: Colors.black38,
+                        blurRadius: 15),
+                    BoxShadow(
+                        offset: const Offset(-10, -10),
+                        color: Colors.white.withOpacity(0.6),
+                        blurRadius: 15)
+                  ]),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/categorie');
+                },
+                icon: const Icon(
+                  Icons.arrow_circle_left_outlined,
+                  size: 70,
+                  color: Colors.black,
+                ),
               ),
             ),
           ),
 
+
+
           Positioned(
             left: 300,
             top: 650,
-            child: IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/timer_categoria1');
-              },
-              icon: const Icon(
-                Icons.arrow_circle_right_rounded,
-                size: 70,
-                color: Colors.black,
+            child: Container(
+              width: 90,
+              height: 90,
+              decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0),
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    const BoxShadow(
+                        offset: Offset(10, 10),
+                        color: Colors.black38,
+                        blurRadius: 15),
+                    BoxShadow(
+                        offset: const Offset(-10, -10),
+                        color: Colors.white.withOpacity(0.6),
+                        blurRadius: 15)
+                  ]),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/timer_categoria2');
+                },
+                icon: const Icon(
+                  Icons.arrow_circle_right_outlined,
+                  size: 70,
+                  color: Colors.black,
+                ),
               ),
             ),
           ),

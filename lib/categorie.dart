@@ -16,7 +16,9 @@ class Categorie extends StatelessWidget {
             Positioned(
               top: 0,
               child: Image.asset(
-                'assets/images/GUESS_the_image_clean.png',
+                'assets/images/sfondo.jpg',
+                color: Colors.white.withOpacity(0.8),
+                colorBlendMode: BlendMode.modulate,
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
                 fit: BoxFit.cover,
@@ -29,7 +31,7 @@ class Categorie extends StatelessWidget {
               top: 200, //MediaQuery.of(context).size.height/2,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black87.withOpacity(0),
+                  backgroundColor: Colors.white.withOpacity(0.7),
                   //backgroundColor: Colors.black87,
                   side: const BorderSide(
                     width: 3.0,
@@ -53,7 +55,7 @@ class Categorie extends StatelessWidget {
               top: 310, //MediaQuery.of(context).size.height/2,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black87.withOpacity(0),
+                    backgroundColor: Colors.white.withOpacity(0.7),
                     //backgroundColor: Colors.black87,
                     side: const BorderSide(
                       width: 3.0,
@@ -77,7 +79,7 @@ class Categorie extends StatelessWidget {
               top: 420, //MediaQuery.of(context).size.height/2,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black87.withOpacity(0),
+                    backgroundColor: Colors.white.withOpacity(0.7),
                     //backgroundColor: Colors.black87,
                     side: const BorderSide(
                       width: 3.0,
@@ -101,7 +103,7 @@ class Categorie extends StatelessWidget {
               top: 530, //MediaQuery.of(context).size.height/2,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black87.withOpacity(0),
+                    backgroundColor: Colors.white.withOpacity(0.7),
                     //backgroundColor: Colors.black87,
                     side: const BorderSide(
                       width: 3.0,
@@ -125,7 +127,7 @@ class Categorie extends StatelessWidget {
               top: 640, //MediaQuery.of(context).size.height/2,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black87.withOpacity(0),
+                    backgroundColor: Colors.white.withOpacity(0.7),
                     //backgroundColor: Colors.black87,
                     side: const BorderSide(
                       width: 3.0,
@@ -147,14 +149,32 @@ class Categorie extends StatelessWidget {
             Positioned(
               left: 0,
               top: 60,
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/home_page');
-                },
-                icon: const Icon(
-                  Icons.home,
-                  size: 50,
-                  color: Colors.black,
+              child: Container(
+                width: 70,
+                height: 70,
+                decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0),
+                    shape: BoxShape.rectangle,
+                    boxShadow: [
+                      const BoxShadow(
+                          offset: Offset(10, 10),
+                          color: Colors.black38,
+                          blurRadius: 15),
+                      BoxShadow(
+                          offset: const Offset(-10, -10),
+                          color: Colors.white.withOpacity(0.6),
+                          blurRadius: 15)
+                    ]
+                ),
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/home_page');
+                  },
+                  icon: const Icon(
+                    Icons.home,
+                    size: 50,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ),

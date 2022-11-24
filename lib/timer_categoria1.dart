@@ -147,15 +147,11 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                 Opacity(
                   opacity: 0.7,
                   child: Image.asset(
-                    "assets/images/GUESS_the_image_clean.png",
-                    height: MediaQuery
-                        .of(context)
-                        .size
-                        .height,
-                    width: MediaQuery
-                        .of(context)
-                        .size
-                        .width,
+                    'assets/images/sfondo.jpg',
+                    color: Colors.white.withOpacity(0.7),
+                    colorBlendMode: BlendMode.modulate,
+                    height: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -182,8 +178,8 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
 
 
                 Positioned(
-                  top: 620,
-                  left: 200,
+                  top: 600,
+                  left: 190,
                   child: GestureDetector(
                     onTap: () {
                       if (controller.isAnimating) {
@@ -201,15 +197,15 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                     },
                     child: Icon(
                       isPlaying == true ? Icons.pause : Icons.play_arrow,
-                      size: 80,
+                      size: 130,
                     ),
                   ),
                 ),
 
 
                 Positioned(
-                  top: 620,
-                  left: 120,
+                  top: 600,
+                  left: 70,
                   child: GestureDetector(
                     onTap: () {
                       controller.reset();
@@ -219,7 +215,7 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                     },
                     child:  const Icon(
                       Icons.stop,
-                      size: 80,
+                      size: 130,
                     ),
 
                     //child: const RoundButton(
@@ -258,17 +254,7 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
 
 
 
-                Positioned(
-                  //top: 100,
-                  width: 350,
-                  height: 350,
-                  child: CircularProgressIndicator(
-                    color: Colors.black,
-                    //backgroundColor: Colors.red,
-                    value: progress,
-                    strokeWidth: 12,
-                  ),
-                ),
+
 
 
 
@@ -297,7 +283,8 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
                     animation: controller,
                     builder: (context, child) => Text(
                       countText,
-                      style: const TextStyle(
+                      style: TextStyle(
+                        backgroundColor: Colors.white.withOpacity(0.5),
                         fontSize: 100,
                         fontWeight: FontWeight.bold,
                       ),
@@ -308,16 +295,45 @@ class _TimerCategoria1State extends State<TimerCategoria1>  with TickerProviderS
 
 
 
+
+
+                Positioned(
+                  //top: 100,
+                    width: 350,
+                    height: 350,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white.withOpacity(0.5),
+                    )
+                ),
+
+
+
+                Positioned(
+                  //top: 100,
+                  width: 350,
+                  height: 350,
+                  child: CircularProgressIndicator(
+                    color: Colors.black,
+                    value: progress,
+                    strokeWidth: 14,
+                  ),
+                ),
+
                 AnimatedBuilder(
                   animation: controller,
                   builder: (context, child) => Text(
                     countText,
                     style: const TextStyle(
-                      fontSize: 100,
+                      //backgroundColor: Colors.white.withOpacity(0.6),
+                      fontSize: 120,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
+
+
+
+
 
 
 

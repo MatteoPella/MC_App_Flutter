@@ -128,6 +128,17 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
 
 
                 Positioned(
+                  top: 190,
+                  width: 320,
+                  height: 320,
+                  child: CircularProgressIndicator(
+                    color: Colors.black,
+                    value: progress,
+                    strokeWidth: 14,
+                  ),
+                ),
+
+                Positioned(
                     top: 200,
                     child: Container(
                       width: 300,
@@ -188,16 +199,10 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
                 ),
 
 
-                Positioned(
-                  top: 200,
-                  width: 300,
-                  height: 300,
-                  child: CircularProgressIndicator(
-                    color: Colors.black,
-                    value: progress,
-                    strokeWidth: 14,
-                  ),
-                ),
+
+
+
+
 
 
 

@@ -116,7 +116,7 @@ class Categorie extends StatelessWidget {
                   Navigator.pushNamed(context, '/pag_categoria1');
                 },
                 child: Text(
-                  'OGGETTI',
+                  'ANIMALI',
                   style: GoogleFonts.peralta(fontSize: 50, color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -140,7 +140,7 @@ class Categorie extends StatelessWidget {
                   Navigator.pushNamed(context, '/pag_categoria1');
                 },
                 child: Text(
-                  'ANIMALI',
+                  'CASUALE',
                   style: GoogleFonts.peralta(fontSize: 50, color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               ),

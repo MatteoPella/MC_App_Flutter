@@ -12,8 +12,7 @@ class PagCategoria1 extends StatefulWidget {
 
 class _PagCategoria1State extends State<PagCategoria1>
     with SingleTickerProviderStateMixin {
-  int x = Random().nextInt(3) + 1;
-  //int y = 1;
+  int x = 0; //Random().nextInt(3) + 1;
   late AnimationController _controller;
   late CurvedAnimation animation;
 
@@ -59,11 +58,8 @@ class _PagCategoria1State extends State<PagCategoria1>
   @override
   Widget build(BuildContext context) {
 
-    const backgroundImage = 'assets/images/GUESS_the_image_clean.png';
-
     RouteSettings settings = ModalRoute.of(context)!.settings;
-    //article = settings.arguments as Article;
-    String t = settings.arguments.toString();
+    //String t = settings.arguments.toString();
 
     return Scaffold(
 
@@ -117,7 +113,7 @@ class _PagCategoria1State extends State<PagCategoria1>
             top: 200, //MediaQuery.of(context).size.height/2,
             child: Image(height:400- (animation.value)*200,
               image: AssetImage(
-                  'assets/images/$x.jpg'
+                  'assets/images/film/$x.jpg'
               ),
             ),
           ),

@@ -17,13 +17,47 @@ class Categorie extends StatelessWidget {
               top: 0,
               child: Image.asset(
                 'assets/images/sfondo.jpg',
-                color: Colors.white.withOpacity(0.8),
+                color: Colors.white.withOpacity(0.7),
                 colorBlendMode: BlendMode.modulate,
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
                 fit: BoxFit.cover,
               ),
             ),
+
+
+
+            Positioned(
+              left: 130,
+              top: 60,
+              child: Container(
+                width: 120,
+                height: 120,
+                decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0),
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      const BoxShadow(
+                          offset: Offset(10, 10),
+                          color: Colors.black38,
+                          blurRadius: 15),
+                      BoxShadow(
+                          offset: const Offset(-10, -10),
+                          color: Colors.white.withOpacity(0.6),
+                          blurRadius: 15)
+                    ]
+                ),
+                child: IconButton(
+                  //splashRadius: 100,
+                  iconSize: 50,
+                  icon: const Icon(Icons.leaderboard),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/classifica');
+                  },
+                ),
+              ),
+            ),
+
 
 
             Positioned(

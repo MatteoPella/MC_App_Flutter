@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
 
 class Regolamento extends StatelessWidget {
-  const Regolamento({super.key});
+  Regolamento({super.key});
+
+
+
+  final List<String> items = [
+    'Item1',
+    'Item2',
+    'Item3',
+    'Item4',
+  ];
+  String? selectedValue;
+
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
@@ -13,15 +26,11 @@ class Regolamento extends StatelessWidget {
 
           Positioned(
             child: Image.asset(
-              'assets/images/GUESS_the_image_clean.png',
-              height: MediaQuery
-                  .of(context)
-                  .size
-                  .height,
-              width: MediaQuery
-                  .of(context)
-                  .size
-                  .width,
+              'assets/images/sfondo.jpg',
+              color: Colors.white.withOpacity(0.7),
+              colorBlendMode: BlendMode.modulate,
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
             ),
           ),
@@ -47,7 +56,8 @@ class Regolamento extends StatelessWidget {
                   ]),
               child: IconButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/home_page');
+                  //Navigator.pushNamed(context, '/pagina_dropdownbutton');
+                  Navigator.pop(context);
                 },
                 icon: const Icon(
                   Icons.arrow_circle_left_outlined,
@@ -55,6 +65,23 @@ class Regolamento extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
+            ),
+          ),
+
+
+
+
+          Positioned(
+            width: MediaQuery.of(context).size.width - 30,
+            left: 15,
+            top: 180,
+            child: Container(
+              height: 600,
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.8),
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
+              ),
+              child: null
             ),
           ),
 

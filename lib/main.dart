@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nuova_prova_1/categorie.dart';
+import 'package:nuova_prova_1/classifica.dart';
+import 'pagina_dropdownbutton.dart';
+import 'inserSquadra.dart';
 import 'package:nuova_prova_1/regolamento.dart';
 import 'package:nuova_prova_1/timer_categoria1.dart';
 import 'package:nuova_prova_1/timer_categoria2.dart';
@@ -18,6 +21,16 @@ class MyApp extends StatelessWidget {
 
   const MyApp({Key? key}) : super(key: key);
 
+
+  //static var coun = 0;
+
+  //static Map map = <int, String>{};
+
+  static List<int> puntSquadre = [0,0,0,0,0];
+  static List<String> listaSquadre = [];
+
+
+
   @override
   Widget build(BuildContext context) => MaterialApp(
     title: 'La mia app',
@@ -34,7 +47,10 @@ class MyApp extends StatelessWidget {
   Map<String, WidgetBuilder> routing(){
     return {
       '/home_page': (context) => const HomePage(),
-      '/regolamento': (context) => const Regolamento(),
+      '/regolamento': (context) => Regolamento(),
+      '/pagina_dropdownbutton': (context) => Pagina_dropdownbutton(),
+      '/inserSquadra': (context) => InserSquadra(),
+      '/classifica': (context) => Classifica(),
       '/categorie': (context) => const Categorie(),
       '/pag_categoria1': (context) => const PagCategoria1(),
       '/timer_categoria1': (context) => const TimerCategoria1(),

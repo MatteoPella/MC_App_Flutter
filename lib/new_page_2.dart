@@ -61,6 +61,8 @@ class _NewPage2State extends State<NewPage2>
     //article = settings.arguments as Article;
     String t = settings.arguments.toString();
 
+
+
     return Scaffold(
 
       //backgroundColor: Colors.lightBlue,

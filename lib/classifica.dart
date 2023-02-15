@@ -93,7 +93,7 @@ class _ClassificaState extends State<Classifica> {
             child: Container(
               height: 500,
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.7),
+                color: Colors.white.withOpacity(0.8),
                 borderRadius: const BorderRadius.all(Radius.circular(10)),
               ),
               child: Form(

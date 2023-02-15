@@ -6,16 +6,6 @@ class Regolamento extends StatelessWidget {
   Regolamento({super.key});
 
 
-
-  final List<String> items = [
-    'Item1',
-    'Item2',
-    'Item3',
-    'Item4',
-  ];
-  String? selectedValue;
-
-
   @override
   Widget build(BuildContext context) {
 

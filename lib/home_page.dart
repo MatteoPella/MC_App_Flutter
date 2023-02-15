@@ -72,7 +72,11 @@ class HomePage extends StatelessWidget {
               },
               child: Text(
                 'INIZIA',
-                style: GoogleFonts.peralta(fontSize: 50, color: Colors.black, fontWeight: FontWeight.bold),
+                style: GoogleFonts.peralta(
+                    fontSize: 50,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold
+                ),
               ),
             ),
           ),
@@ -117,6 +121,7 @@ class HomePage extends StatelessWidget {
 
 
 
+          /*
           Positioned(
             left: 250,
             top: 700,
@@ -145,6 +150,57 @@ class HomePage extends StatelessWidget {
                   Navigator.pushNamed(context, '/inserSquadra');
                 },
               ),
+            ),
+          ),*/
+
+
+
+
+
+          Positioned(
+            left: 220,
+            top: 700,
+            child: Container(
+                width: 180,
+                height: 110,
+                decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0),
+                    shape: BoxShape.rectangle,
+                    boxShadow: [
+                      const BoxShadow(
+                          offset: Offset(10, 10),
+                          color: Colors.black38,
+                          blurRadius: 15),
+                      BoxShadow(
+                          offset: const Offset(-10, -10),
+                          color: Colors.white.withOpacity(0.6),
+                          blurRadius: 15)
+                    ]),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+
+                      IconButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/inserSquadra');
+                        },
+                        icon: const Icon(
+                          Icons.add_circle,
+                          size: 50,
+                          color: Colors.black,
+                        ),
+                      ),
+
+                      const SizedBox(
+                          height: 10
+                      ),
+
+                      Text(
+                        'SQUADRE',
+                        style: GoogleFonts.peralta(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                      ),
+                    ]
+                )
             ),
           ),
 

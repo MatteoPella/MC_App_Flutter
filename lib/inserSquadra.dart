@@ -140,9 +140,9 @@ class _InserSquadraState extends State<InserSquadra> {
             left: 15,
             top: 150,
             child: Container(
-              height: 200,
+              height: 230,
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.7),
+                color: Colors.white.withOpacity(0.8),
                 borderRadius: const BorderRadius.all(Radius.circular(10)),
               ),
               child: Form(
@@ -153,15 +153,22 @@ class _InserSquadraState extends State<InserSquadra> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      const Text(
-                        'Inserisci nome squadra',
+                      Text(
+                        'Inserisci nome squadra (max 5)',
+                        style: GoogleFonts.peralta(
+                            fontSize: 30,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold
+                        ),
+                        /*
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 30,
                           color: Colors.black,
-                        ),
+                        ),*/
                       ),
 
+                      /*
                       const Text(
                         '(max 5)',
                         style: TextStyle(
@@ -169,14 +176,14 @@ class _InserSquadraState extends State<InserSquadra> {
                           fontSize: 20,
                           color: Colors.black,
                         ),
-                      ),
+                      ),*/
 
                       const SizedBox(height: 10),
 
                       TextFormField(
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 25,
                           color: Colors.black,
                         ),
                         inputFormatters: [
@@ -189,7 +196,7 @@ class _InserSquadraState extends State<InserSquadra> {
                         controller: _nomeController,
                       ),
 
-                      const SizedBox(height: 15),
+                      const SizedBox(height: 8),
 
                       /*
                       TextFormField(
@@ -217,8 +224,15 @@ class _InserSquadraState extends State<InserSquadra> {
                               if (MyApp.listaSquadre.length < 5) {
                                 if (MyApp.listaSquadre.contains(_nomeController.text)) {
                                   ScaffoldMessenger.of(context)
-                                      .showSnackBar(const SnackBar(
-                                    content: Text("Squadra già presente"),
+                                      .showSnackBar(SnackBar(
+                                    content: Text(
+                                      "Squadra già presente",
+                                      style: GoogleFonts.peralta(
+                                          fontSize: 30,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold
+                                      ),
+                                    ),
                                   ));
                                   _nomeController.clear();
                                 }
@@ -228,25 +242,39 @@ class _InserSquadraState extends State<InserSquadra> {
                                 }
                               } else {
                                 ScaffoldMessenger.of(context)
-                                    .showSnackBar(const SnackBar(
-                                  content: Text("Limite di squadre raggiunto"),
+                                    .showSnackBar(SnackBar(
+                                  content: Text(
+                                    "Limite di squadre raggiunto",
+                                    style: GoogleFonts.peralta(
+                                        fontSize: 30,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold
+                                    ),
+                                  ),
                                 ));
                                 _nomeController.clear();
                               }
                             } else {
                               ScaffoldMessenger.of(context)
-                                  .showSnackBar(const SnackBar(
-                                content: Text("Text is empty"),
+                                  .showSnackBar(SnackBar(
+                                content: Text(
+                                  "Text is empty",
+                                  style: GoogleFonts.peralta(
+                                      fontSize: 30,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold
+                                  ),
+                                ),
                               ));
                             }
                           });
                         },
-                        child: const Text(
+                        child: Text(
                           "Aggiungi",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25,
-                            color: Colors.black,
+                          style: GoogleFonts.peralta(
+                              fontSize: 30,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold
                           ),
                         ),
                       ),
@@ -269,11 +297,11 @@ class _InserSquadraState extends State<InserSquadra> {
             Positioned(
               width: MediaQuery.of(context).size.width - 30,
               left: 15,
-              top: 360,
+              top: 400,
               child: Container(
                 height: 420,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.7),
+                  color: Colors.white.withOpacity(0.8),
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Form(
@@ -289,12 +317,12 @@ class _InserSquadraState extends State<InserSquadra> {
 
                         Row(children: [
 
-                          const Text(
+                          Text(
                             'Lista squadre:',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 30,
-                              color: Colors.black,
+                            style: GoogleFonts.peralta(
+                                fontSize: 30,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold
                             ),
                           ),
 
@@ -322,11 +350,11 @@ class _InserSquadraState extends State<InserSquadra> {
                                 ),
 
                                 Text(
-                                  style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 30,
-                                    color: Colors.black,
-                                  ),
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 30,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold
+                                    ),
                                   //listaSquadre.isNotEmpty?listaSquadre.toString():""
                                   MyApp.listaSquadre[i]
                                 ),

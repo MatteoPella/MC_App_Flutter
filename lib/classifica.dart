@@ -5,7 +5,6 @@ import 'package:nuova_prova_1/squadra.dart';
 import 'package:nuova_prova_1/squadra_builder.dart';
 import 'package:nuova_prova_1/squadra_builder2.dart';
 
-import 'database_service.dart';
 
 class Classifica extends StatefulWidget {
   @override
@@ -71,8 +70,8 @@ class _ClassificaState extends State<Classifica> {
                   ]),
               child: IconButton(
                 onPressed: () {
-                  //Navigator.pushNamed(context, '/pagina_dropdownbutton');
-                  Navigator.pop(context);
+                  //Navigator.pop(context);
+                  Navigator.of(context).pop();
                 },
                 icon: const Icon(
                   Icons.arrow_circle_left_outlined,

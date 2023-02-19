@@ -1,6 +1,15 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:nuova_prova_1/categorie.dart';
 import 'package:nuova_prova_1/classifica.dart';
+import 'package:nuova_prova_1/utils/locator.dart';
+import 'package:nuova_prova_1/utils/prefer.dart';
+import 'package:nuova_prova_1/utils/routes.dart';
+import 'package:provider/provider.dart';
+import 'View_Model/home_view_model.dart';
+import 'View_Model/sign_in_view_model.dart';
 import 'pagina_dropdownbutton.dart';
 import 'inserSquadra.dart';
 import 'package:nuova_prova_1/regolamento.dart';
@@ -13,24 +22,55 @@ import 'new_page_2.dart';
 import 'new_page_3.dart';
 
 
+/*
 void main() {
   runApp(const MyApp());
+}*/
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  Prefs.init();
+  setLocator();
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider<HomeViewModel>(
+      create: (_) => HomeViewModel(),
+    ),
+  ],child: MyApp(),));
 }
 
-class MyApp extends StatelessWidget {
 
-  const MyApp({Key? key}) : super(key: key);
-
-
-  //static var coun = 0;
-
-  //static Map map = <int, String>{};
+class MyApp extends StatefulWidget{
 
   static List<int> puntSquadre = [0,0,0,0,0];
   static List<String> listaSquadre = [];
 
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  @override
+  _MyAppState createState() => _MyAppState();
+}
 
 
+class _MyAppState extends State<MyApp> {
+
+  //MyApp({Key? key}) : super(key: key);
+
+
+
+  late Locale locale;
+  bool localeLoaded = false;
+
+  @override
+  void initState() {
+    super.initState();
+    print('initState()');
+
+    //MyApp.setLocale(context, locale);
+  }
+
+
+  /*
   @override
   Widget build(BuildContext context) => MaterialApp(
     title: 'La mia app',
@@ -41,12 +81,45 @@ class MyApp extends StatelessWidget {
     ),
     routes: routing(),
     home: const HomePage(),
-  );
+  );*/
+
+
+  @override
+  Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+        systemNavigationBarColor: Colors.grey[400],
+//        statusBarColor: Styles.blueColor,
+        statusBarIconBrightness:
+        Brightness.light //or set color with: Color(0xFF0000FF)
+    ));
+    return ChangeNotifierProvider<SignInViewModel>(
+      create: (_) => SignInViewModel(),
+      child: Center(
+        child: MaterialApp(
+          initialRoute: '/',
+          debugShowCheckedModeBanner: false,
+          onGenerateRoute: Routes.onGenerateRoute,
+
+          theme: ThemeData(
+            primaryColor:Colors.black,
+
+            fontFamily: 'FA',
+
+          ),
+        ),
+      ),
+    );
+  }
+
 
 
   Map<String, WidgetBuilder> routing(){
     return {
-      '/home_page': (context) => const HomePage(),
+      '/home_page': (context) => HomePage(),
       '/regolamento': (context) => Regolamento(),
       '/pagina_dropdownbutton': (context) => Pagina_dropdownbutton(),
       '/inserSquadra': (context) => InserSquadra(),
@@ -59,4 +132,6 @@ class MyApp extends StatelessWidget {
       '/new_page_3': (context) => const NewPage3(),
     };
   }
+
+
 }

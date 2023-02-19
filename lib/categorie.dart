@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nuova_prova_1/home_page.dart';
+import 'package:nuova_prova_1/pag_categoria1.dart';
+
+import 'classifica.dart';
 
 class Categorie extends StatelessWidget {
   const Categorie({super.key});
@@ -52,7 +56,9 @@ class Categorie extends StatelessWidget {
                   iconSize: 50,
                   icon: const Icon(Icons.leaderboard),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/classifica');
+                    //Navigator.pushNamed(context, '/classifica');
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) {return Classifica();}));
+
                   },
                 ),
               ),
@@ -75,7 +81,9 @@ class Categorie extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/pag_categoria1');
+                  //Navigator.pushNamed(context, '/pag_categoria1');
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+
                 },
                 child: Text(
                   'CARTOON',
@@ -99,7 +107,9 @@ class Categorie extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/pag_categoria1');
+                  //Navigator.pushNamed(context, '/pag_categoria1');
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+
                 },
                 child: Text(
                   'SPORT',
@@ -123,7 +133,9 @@ class Categorie extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/pag_categoria1');
+                  //Navigator.pushNamed(context, '/pag_categoria1');
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+
                 },
                 child: Text(
                   'FILM',
@@ -147,7 +159,9 @@ class Categorie extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/pag_categoria1');
+                  //Navigator.pushNamed(context, '/pag_categoria1');
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+
                 },
                 child: Text(
                   'ANIMALI',
@@ -171,7 +185,9 @@ class Categorie extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/pag_categoria1');
+                  //Navigator.pushNamed(context, '/pag_categoria1');
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+
                 },
                 child: Text(
                   'CASUALE',
@@ -240,7 +256,9 @@ class Categorie extends StatelessWidget {
                     ]),
                 child: IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/home_page');
+                    //Navigator.pushNamed(context, '/home_page');
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) {return HomePage();}));
+
                   },
                   icon: const Icon(
                     Icons.arrow_circle_left_outlined,

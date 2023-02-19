@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nuova_prova_1/categorie.dart';
+import 'package:nuova_prova_1/classifica.dart';
+import 'package:nuova_prova_1/timer_categoria2.dart';
 
 class PagCategoria1 extends StatefulWidget {
   const PagCategoria1({Key? key}) : super(key: key);
@@ -200,7 +203,9 @@ class _PagCategoria1State extends State<PagCategoria1>
                   ]),
               child: IconButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/categorie');
+                  //Navigator.pushNamed(context, '/categorie');
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return Categorie();}));
+
                 },
                 icon: const Icon(
                   Icons.arrow_circle_left_outlined,
@@ -234,7 +239,9 @@ class _PagCategoria1State extends State<PagCategoria1>
                   ]),
               child: IconButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/timer_categoria2');
+                  //Navigator.pushNamed(context, '/timer_categoria2');
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return TimerCategoria2();}));
+
                 },
                 icon: const Icon(
                   Icons.arrow_circle_right_outlined,
@@ -271,7 +278,9 @@ class _PagCategoria1State extends State<PagCategoria1>
                 iconSize: 50,
                 icon: const Icon(Icons.leaderboard),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/classifica');
+                  //Navigator.pushNamed(context, '/classifica');
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return Classifica();}));
+
                 },
               ),
             ),

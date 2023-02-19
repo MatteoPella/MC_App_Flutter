@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:nuova_prova_1/home_screen.dart';
+import 'package:nuova_prova_1/login_screen.dart';
+import 'package:nuova_prova_1/regolamento.dart';
+
+import 'categorie.dart';
+import 'inserSquadra.dart';
 
 const backgroundImage = 'assets/images/GUESS_the_image3.png';
 const bottoneInizia = 'assets/images/bottone.png';
 
 class HomePage extends StatelessWidget {
-    const HomePage({super.key});
+    HomePage({super.key});
 
+    final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-
+    void signOutGoogle() async{
+      await _googleSignIn.signOut();
+      print("User Sign Out");
+    }
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +62,39 @@ class HomePage extends StatelessWidget {
 
 
 
+          Positioned(
+            left: 320,
+            top: 60,
+            child: Container(
+              width: 70,
+              height: 70,
+              decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.5),
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    const BoxShadow(
+                        offset: Offset(10, 10),
+                        color: Colors.black38,
+                        blurRadius: 15),
+                    BoxShadow(
+                        offset: const Offset(-10, -10),
+                        color: Colors.white.withOpacity(0.6),
+                        blurRadius: 15)
+                  ]),
+              child: IconButton(
+                onPressed: () {
+                  signOutGoogle();
+                  //Navigator.pop(context);
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return LoginScreen();}));
+                },
+                icon: const Icon(
+                  Icons.logout,
+                  size: 50,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ),
 
 
 
@@ -68,7 +112,9 @@ class HomePage extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50))),
               onPressed: () {
-                Navigator.pushNamed(context, '/categorie');
+                //Navigator.pushNamed(context, '/categorie');
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) {return Categorie();}));
+
               },
               child: Text(
                 'INIZIA',
@@ -112,7 +158,9 @@ class HomePage extends StatelessWidget {
                 iconSize: 100,
                 icon: Image.asset('assets/images/regolamento.png'),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/regolamento');
+                  //Navigator.pushNamed(context, '/regolamento');
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return Regolamento();}),);
+
                 },
               ),
             ),
@@ -182,7 +230,9 @@ class HomePage extends StatelessWidget {
 
                       IconButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/inserSquadra');
+                          //Navigator.pushNamed(context, '/inserSquadra');
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) {return InserSquadra();}));
+
                         },
                         icon: const Icon(
                           Icons.add_circle,

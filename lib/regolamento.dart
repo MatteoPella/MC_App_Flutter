@@ -47,7 +47,9 @@ class Regolamento extends StatelessWidget {
               child: IconButton(
                 onPressed: () {
                   //Navigator.pushNamed(context, '/pagina_dropdownbutton');
+                  //Navigator.pop(context);
                   Navigator.pop(context);
+
                 },
                 icon: const Icon(
                   Icons.arrow_circle_left_outlined,

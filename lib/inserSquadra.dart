@@ -5,7 +5,6 @@ import 'package:counter_button/counter_button.dart';
 import 'package:nuova_prova_1/squadra.dart';
 import 'package:nuova_prova_1/squadra_builder.dart';
 
-import 'database_service.dart';
 import 'main.dart';
 
 class InserSquadra extends StatefulWidget {
@@ -17,31 +16,12 @@ class _InserSquadraState extends State<InserSquadra> {
   final TextEditingController _nomeController = TextEditingController();
   final TextEditingController _puntController = TextEditingController();
 
-  final DatabaseService _databaseService = DatabaseService();
 
   //List<String> listaSquadre = [];
 
   //int _counterValue = 0;
 
-
-  Future<void> _onSave() async {
-    final nome = _nomeController.text;
-    final punteggio = int.parse(_puntController.text);
-
-    await _databaseService
-        .insertSquadra(Squadra(nome: nome, punteggio: punteggio));
-
-    if (!mounted) return;
-
-    //Navigator.pop(context);
-  }
-
-  Future<List<Squadra>> _getSquadre() async {
-    return await _databaseService.squadre();
-  }
-
-
-
+  
 
   void resetSquadre(){
     MyApp.listaSquadre = [];
@@ -110,7 +90,8 @@ class _InserSquadraState extends State<InserSquadra> {
                   ]),
               child: IconButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/home_page');
+                  //Navigator.pushNamed(context, '/home_page');
+                  Navigator.pop(context);
                 },
                 icon: const Icon(
                   Icons.arrow_circle_left_outlined,

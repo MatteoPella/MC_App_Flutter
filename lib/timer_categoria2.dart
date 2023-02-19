@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nuova_prova_1/categorie.dart';
+import 'package:nuova_prova_1/classifica.dart';
 import 'package:nuova_prova_1/home_page.dart';
+import 'package:nuova_prova_1/pag_categoria1.dart';
 import 'package:nuova_prova_1/round_button.dart';
 
 
@@ -71,7 +74,9 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
     Widget continueButton = TextButton(
       child: const Text("Continue"),
       onPressed:  () {
-        Navigator.pushNamed(context, '/home_page');
+        //Navigator.pushNamed(context, '/home_page');
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {return HomePage();}));
+
       },
     );
 
@@ -309,7 +314,9 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
                         ]),
                     child: IconButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/pag_categoria1');
+                        //Navigator.pushNamed(context, '/pag_categoria1');
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+
                       },
                       icon: const Icon(
                         Icons.arrow_circle_left_outlined,
@@ -344,7 +351,9 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
                     ),
                     child: IconButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/home_page');
+                        //Navigator.pushNamed(context, '/home_page');
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {return HomePage();}));
+
                       },
                       icon: const Icon(
                         Icons.home,
@@ -383,7 +392,9 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
 
                         IconButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/categorie');
+                            //Navigator.pushNamed(context, '/categorie');
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context) {return Categorie();}));
+
                           },
                           icon: const Icon(
                             Icons.restart_alt_rounded,
@@ -432,7 +443,9 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
                       iconSize: 50,
                       icon: const Icon(Icons.leaderboard),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/classifica');
+                        //Navigator.pushNamed(context, '/classifica');
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {return Classifica();}));
+
                       },
                     ),
                   ),

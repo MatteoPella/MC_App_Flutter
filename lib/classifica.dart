@@ -1,9 +1,7 @@
 import 'package:counter_button/counter_button.dart';
 import 'package:flutter/material.dart';
-import 'package:nuova_prova_1/main.dart';
-import 'package:nuova_prova_1/squadra.dart';
-import 'package:nuova_prova_1/squadra_builder.dart';
-import 'package:nuova_prova_1/squadra_builder2.dart';
+
+import 'main.dart';
 
 
 class Classifica extends StatefulWidget {

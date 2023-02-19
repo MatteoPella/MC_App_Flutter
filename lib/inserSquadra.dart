@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:counter_button/counter_button.dart';
-import 'package:nuova_prova_1/squadra.dart';
-import 'package:nuova_prova_1/squadra_builder.dart';
 
 import 'main.dart';
 

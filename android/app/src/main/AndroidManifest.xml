@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nuova_prova_1">
+    package="com.example.Mimic_Picture">
    <application
-        android:label="nuova_prova_1"
+        android:label="Mimic_Picture"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

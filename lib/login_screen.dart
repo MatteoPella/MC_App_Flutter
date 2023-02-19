@@ -1,10 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:nuova_prova_1/home_page.dart';
-import 'package:nuova_prova_1/home_screen.dart';
 import 'View_Model/sign_in_view_model.dart';
 import 'base/base_view.dart';
+import 'home_page.dart';
 import 'splash.dart';
 import 'utils/util.dart';
 import 'utils/view_state.dart';

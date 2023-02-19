@@ -1,12 +1,11 @@
+import 'package:Mimic_Picture/regolamento.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:nuova_prova_1/home_screen.dart';
-import 'package:nuova_prova_1/login_screen.dart';
-import 'package:nuova_prova_1/regolamento.dart';
 
 import 'categorie.dart';
 import 'inserSquadra.dart';
+import 'login_screen.dart';
 
 const backgroundImage = 'assets/images/GUESS_the_image3.png';
 const bottoneInizia = 'assets/images/bottone.png';

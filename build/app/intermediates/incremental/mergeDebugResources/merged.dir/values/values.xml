@@ -124,16 +124,16 @@
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="copy_toast_msg">Link copied to clipboard</string>
-    <string name="default_web_client_id" translatable="false">324185767531-2ifjm3h7jl9b90p3b8jbm9mvkbhinah3.apps.googleusercontent.com</string>
+    <string name="default_web_client_id" translatable="false">956632947675-qpcl3bk8j6p4a4d53jsaepaaa0a0jomg.apps.googleusercontent.com</string>
     <string name="fallback_menu_item_copy_link">Copy link</string>
     <string name="fallback_menu_item_open_in_browser">Open in browser</string>
     <string name="fallback_menu_item_share_link">Share link</string>
-    <string name="gcm_defaultSenderId" translatable="false">324185767531</string>
-    <string name="google_api_key" translatable="false">AIzaSyABrny5XVJn4P3-ANvq8oHj4sUcIvu39dA</string>
-    <string name="google_app_id" translatable="false">1:324185767531:android:e24096892ea4c5bdb3bb2e</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyABrny5XVJn4P3-ANvq8oHj4sUcIvu39dA</string>
-    <string name="google_storage_bucket" translatable="false">app-mc-autenticazione.appspot.com</string>
-    <string name="project_id" translatable="false">app-mc-autenticazione</string>
+    <string name="gcm_defaultSenderId" translatable="false">956632947675</string>
+    <string name="google_api_key" translatable="false">AIzaSyDf5fg-z2tuX5bSE4RgYMDV_c_ylS6LPYU</string>
+    <string name="google_app_id" translatable="false">1:956632947675:android:c4e72805fb6b889778e5fe</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDf5fg-z2tuX5bSE4RgYMDV_c_ylS6LPYU</string>
+    <string name="google_storage_bucket" translatable="false">app-mc-autenticazione-92044.appspot.com</string>
+    <string name="project_id" translatable="false">app-mc-autenticazione-92044</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <!-- Show a splash screen on the activity. Automatically removed when

@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nuova_prova_1/article.dart';
 
 const im1 = 'assets/images/1';
 const im2 = 'assets/images/2';

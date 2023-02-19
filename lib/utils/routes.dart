@@ -1,8 +1,9 @@
+import 'package:Mimic_Picture/utils/routeNames.dart';
 import 'package:flutter/material.dart';
-import 'package:nuova_prova_1/home_screen.dart';
-import 'package:nuova_prova_1/login_screen.dart';
-import 'package:nuova_prova_1/splash.dart';
-import 'package:nuova_prova_1/utils/routeNames.dart';
+
+import '../home_screen.dart';
+import '../login_screen.dart';
+import '../splash.dart';
 
 class Routes {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {

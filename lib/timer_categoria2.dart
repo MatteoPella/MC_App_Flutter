@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:nuova_prova_1/categorie.dart';
-import 'package:nuova_prova_1/classifica.dart';
-import 'package:nuova_prova_1/home_page.dart';
-import 'package:nuova_prova_1/cat_film.dart';
-import 'package:nuova_prova_1/round_button.dart';
+
+import 'categorie.dart';
+import 'classifica.dart';
+import 'home_page.dart';
 
 
 class TimerCategoria2 extends StatefulWidget {
@@ -43,7 +42,7 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
     super.initState();
     controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 180),
+      duration: const Duration(seconds: 120),
     );
 
     controller.addListener(() {
@@ -68,6 +67,7 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
   }
 
 
+  /*
   showAlertDialog(BuildContext context) {
 
     // set up the buttons
@@ -79,6 +79,7 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
 
       },
     );
+
 
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
@@ -96,7 +97,7 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
         return alert;
       },
     );
-  }
+  }*/
 
 
 

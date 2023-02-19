@@ -1,6 +1,6 @@
 
 import 'package:flutter/foundation.dart';
-import 'package:nuova_prova_1/utils/view_state.dart';
+import '../utils/view_state.dart';
 
 class BaseModel with ChangeNotifier {
   ViewState _state = ViewState.Idle;

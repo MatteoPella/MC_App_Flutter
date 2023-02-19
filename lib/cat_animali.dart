@@ -1,10 +1,11 @@
+import 'package:Mimic_Picture/timer_categoria2.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:nuova_prova_1/categorie.dart';
-import 'package:nuova_prova_1/classifica.dart';
-import 'package:nuova_prova_1/timer_categoria2.dart';
+
+import 'categorie.dart';
+import 'classifica.dart';
 
 class CatAnimali extends StatefulWidget {
   const CatAnimali({Key? key}) : super(key: key);
@@ -181,7 +182,7 @@ class _CatAnimaliState extends State<CatAnimali>
 
 
 
-
+          /*
           Positioned(
             left: 0,
             top: 50,
@@ -214,7 +215,7 @@ class _CatAnimaliState extends State<CatAnimali>
                 ),
               ),
             ),
-          ),
+          ),*/
 
 
 

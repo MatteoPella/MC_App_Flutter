@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.example.nuova_prova_1"
+3    package="com.example.Mimic_Picture"
 4    android:versionCode="1"
 5    android:versionName="1.0.0" >
 6
@@ -25,9 +25,9 @@
 20-->[androidx.core:core:1.6.0] /home/mpella/.gradle/caches/transforms-3/b11c0e2c212c747cb4bcf29314469768/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 21        android:debuggable="true"
 22        android:icon="@mipmap/ic_launcher"
-23        android:label="nuova_prova_1" >
+23        android:label="Mimic_Picture" >
 24        <activity
-25            android:name="com.example.nuova_prova_1.MainActivity"
+25            android:name="com.example.Mimic_Picture.MainActivity"
 26            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
 27            android:exported="true"
 28            android:hardwareAccelerated="true"
@@ -175,7 +175,7 @@
 116-->[com.google.firebase:firebase-common:20.3.0] /home/mpella/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:25:9-30:39
 117            android:name="com.google.firebase.provider.FirebaseInitProvider"
 117-->[com.google.firebase:firebase-common:20.3.0] /home/mpella/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:26:13-77
-118            android:authorities="com.example.nuova_prova_1.firebaseinitprovider"
+118            android:authorities="com.example.Mimic_Picture.firebaseinitprovider"
 118-->[com.google.firebase:firebase-common:20.3.0] /home/mpella/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:27:13-72
 119            android:directBootAware="true"
 119-->[com.google.firebase:firebase-common:20.3.0] /home/mpella/.gradle/caches/transforms-3/b24238b145583e9bb28ada432bde27f7/transformed/jetified-firebase-common-20.3.0/AndroidManifest.xml:28:13-43

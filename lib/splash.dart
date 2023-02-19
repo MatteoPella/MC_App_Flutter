@@ -66,14 +66,6 @@ class VideoState extends State<Splash> with SingleTickerProviderStateMixin{
             fit: StackFit.expand,
             children: <Widget>[
               Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-
-                  Padding(padding: const EdgeInsets.only(bottom: 30.0),child:Image.asset('assets/im_login/powered_by.png',height: 25.0,fit: BoxFit.scaleDown,))
-
-                ],),
-              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(

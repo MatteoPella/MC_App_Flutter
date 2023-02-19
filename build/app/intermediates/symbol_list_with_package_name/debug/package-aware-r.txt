@@ -1,4 +1,4 @@
-com.example.nuova_prova_1
+com.example.Mimic_Picture
 attr activityAction
 attr activityName
 attr alpha

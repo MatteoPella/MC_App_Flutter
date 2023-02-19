@@ -114,9 +114,10 @@ class Regolamento extends StatelessWidget {
                           'che viene svolto fisicamente, non sul dispositivo. '
                           'Sono presenti varie categorie di immagini, dalle quali ne viene '
                           'selezionata una casualmente. Un giocatore deve mimare l\'immagine '
-                          'generata e farla indovinare alla propria squadra. Ovviamente, '
-                          'solo la persona che mima può assistere alla rivelazione '
-                          'dell\'immagine.',
+                          'generata e farla indovinare alla propria squadra, '
+                          'con un tempo massimo di due minuti (è possibile '
+                          'cambiare questo valore). Ovviamente, solo la persona '
+                          'che mima può assistere alla rivelazione dell\'immagine.',
                           style: GoogleFonts.peralta(
                             fontSize: 22,
                             color: Colors.black,

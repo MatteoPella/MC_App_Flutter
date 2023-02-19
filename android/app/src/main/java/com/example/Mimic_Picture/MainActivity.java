@@ -1,4 +1,4 @@
-package com.example.nuova_prova_1;
+package com.example.Mimic_Picture;
 
 import io.flutter.embedding.android.FlutterActivity;
 

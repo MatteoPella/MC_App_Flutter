@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:nuova_prova_1/cat_cartoon.dart';
 import 'package:nuova_prova_1/categorie.dart';
 import 'package:nuova_prova_1/classifica.dart';
 import 'package:nuova_prova_1/utils/locator.dart';
@@ -10,14 +11,16 @@ import 'package:nuova_prova_1/utils/routes.dart';
 import 'package:provider/provider.dart';
 import 'View_Model/home_view_model.dart';
 import 'View_Model/sign_in_view_model.dart';
+import 'cat_animali.dart';
+import 'cat_casuale.dart';
+import 'cat_sport.dart';
 import 'pagina_dropdownbutton.dart';
 import 'inserSquadra.dart';
 import 'package:nuova_prova_1/regolamento.dart';
 import 'package:nuova_prova_1/timer_categoria1.dart';
 import 'package:nuova_prova_1/timer_categoria2.dart';
 import 'home_page.dart';
-import 'home_page2.dart';
-import 'pag_categoria1.dart';
+import 'cat_film.dart';
 import 'new_page_2.dart';
 import 'new_page_3.dart';
 
@@ -117,6 +120,7 @@ class _MyAppState extends State<MyApp> {
 
 
 
+  /*
   Map<String, WidgetBuilder> routing(){
     return {
       '/home_page': (context) => HomePage(),
@@ -125,13 +129,17 @@ class _MyAppState extends State<MyApp> {
       '/inserSquadra': (context) => InserSquadra(),
       '/classifica': (context) => Classifica(),
       '/categorie': (context) => const Categorie(),
-      '/pag_categoria1': (context) => const PagCategoria1(),
+      '/cat_cartoon': (context) => const CatCartoon(),
+      '/cat_sport': (context) => const CatSport(),
+      '/cat_film': (context) => const CatFilm(),
+      '/cat_animali': (context) => const CatAnimali(),
+      '/cat_casuale': (context) => const CatCasuale(),
       '/timer_categoria1': (context) => const TimerCategoria1(),
       '/timer_categoria2': (context) => const TimerCategoria2(),
       '/new_page_2': (context) => const NewPage2(),
       '/new_page_3': (context) => const NewPage3(),
     };
-  }
+  }*/
 
 
 }

@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nuova_prova_1/categorie.dart';
 import 'package:nuova_prova_1/classifica.dart';
 import 'package:nuova_prova_1/home_page.dart';
-import 'package:nuova_prova_1/pag_categoria1.dart';
+import 'package:nuova_prova_1/cat_film.dart';
 import 'package:nuova_prova_1/round_button.dart';
 
 
@@ -315,7 +315,8 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
                     child: IconButton(
                       onPressed: () {
                         //Navigator.pushNamed(context, '/pag_categoria1');
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+                        //Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+                        Navigator.pop(context);
 
                       },
                       icon: const Icon(
@@ -419,7 +420,7 @@ class _TimerCategoria2State extends State<TimerCategoria2>  with TickerProviderS
 
 
                 Positioned(
-                  left: 130,
+                  left: 150,
                   top: 60,
                   child: Container(
                     width: 120,

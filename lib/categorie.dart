@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nuova_prova_1/cat_animali.dart';
+import 'package:nuova_prova_1/cat_casuale.dart';
 import 'package:nuova_prova_1/home_page.dart';
-import 'package:nuova_prova_1/pag_categoria1.dart';
+import 'package:nuova_prova_1/cat_film.dart';
 
+import 'cat_cartoon.dart';
+import 'cat_sport.dart';
 import 'classifica.dart';
 
 class Categorie extends StatelessWidget {
@@ -32,7 +35,7 @@ class Categorie extends StatelessWidget {
 
 
             Positioned(
-              left: 130,
+              left: 150,
               top: 60,
               child: Container(
                 width: 120,
@@ -82,7 +85,7 @@ class Categorie extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
                   //Navigator.pushNamed(context, '/pag_categoria1');
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return CatCartoon();}));
 
                 },
                 child: Text(
@@ -108,7 +111,7 @@ class Categorie extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
                   //Navigator.pushNamed(context, '/pag_categoria1');
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return CatSport();}));
 
                 },
                 child: Text(
@@ -134,7 +137,7 @@ class Categorie extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
                   //Navigator.pushNamed(context, '/pag_categoria1');
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return CatFilm();}));
 
                 },
                 child: Text(
@@ -160,7 +163,7 @@ class Categorie extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
                   //Navigator.pushNamed(context, '/pag_categoria1');
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return CatAnimali();}));
 
                 },
                 child: Text(
@@ -186,7 +189,7 @@ class Categorie extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
                   //Navigator.pushNamed(context, '/pag_categoria1');
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return PagCategoria1();}));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {return CatCasuale();}));
 
                 },
                 child: Text(

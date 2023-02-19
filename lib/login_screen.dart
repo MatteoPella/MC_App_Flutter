@@ -67,12 +67,12 @@ class _LoginScreenState extends State<LoginScreen>{
                     Positioned(
                       //width: MediaQuery.of(context).size.width - 30,
                       //left: MediaQuery.of(context).size.width - 30,
-                      top: 300,
+                      top: 500,
                         child: InkWell(
                           child: Container(
                             width: 350,
                               //width: deviceSize.width,
-                              height: deviceSize.height/16,
+                              height: deviceSize.height/14,
                               margin: const EdgeInsets.only(top: 25),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
@@ -95,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen>{
                                       ),
                                       const Text('Sign in with Google',
                                         style: TextStyle(
-                                            fontSize: 25.0,
+                                            fontSize: 28.0,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white
                                         ),
@@ -123,8 +123,13 @@ class _LoginScreenState extends State<LoginScreen>{
                         ),
                     ),
 
+                    model.state==ViewState.Busy
+                        ? Utils.progressBar()
+                        : Container(),
 
 
+
+                    /*
                     Positioned(
                       width: MediaQuery.of(context).size.width - 30,
                       left: 15,
@@ -210,7 +215,11 @@ class _LoginScreenState extends State<LoginScreen>{
                           ],
                         )
                       ),
-                    ),
+                    ),*/
+
+
+
+
                   ],
 
                 ),

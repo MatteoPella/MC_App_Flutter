@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "956632947675",
+    "project_id": "app-mc-autenticazione-92044",
+    "storage_bucket": "app-mc-autenticazione-92044.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956632947675:android:c4e72805fb6b889778e5fe",
+        "android_client_info": {
+          "package_name": "com.example.Mimic_Picture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956632947675-qpcl3bk8j6p4a4d53jsaepaaa0a0jomg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf5fg-z2tuX5bSE4RgYMDV_c_ylS6LPYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956632947675-qpcl3bk8j6p4a4d53jsaepaaa0a0jomg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

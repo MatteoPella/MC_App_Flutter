@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nuova_prova_1/home_page.dart';
 import 'package:nuova_prova_1/home_screen.dart';
 import 'View_Model/sign_in_view_model.dart';
@@ -61,6 +62,59 @@ class _LoginScreenState extends State<LoginScreen>{
                         fit: BoxFit.cover,
                       ),
                     ),
+
+
+                    Positioned(
+                      top: 210,
+                      child: Container(
+                          width: 360,
+                          height: 180,
+                          decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0),
+                              shape: BoxShape.rectangle,
+                              boxShadow: [
+                                const BoxShadow(
+                                    offset: Offset(10, 10),
+                                    color: Colors.black38,
+                                    blurRadius: 15),
+                                BoxShadow(
+                                    offset: const Offset(-10, -10),
+                                    color: Colors.white.withOpacity(0.6),
+                                    blurRadius: 15)
+                              ]
+                          ),
+                          child: null
+                      ),
+                    ),
+
+                    Positioned(
+                        top: 200,
+                        child: Center(
+                          child: Text(
+                            'MIMIC',
+                            style: GoogleFonts.peralta(
+                              fontSize: 70,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        )
+                    ),
+
+                    Positioned(
+                        top: 300,
+                        child: Center(
+                          child: Text(
+                            'PICTURE',
+                            style: GoogleFonts.peralta(
+                              fontSize: 70,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        )
+                    ),
+
 
 
 

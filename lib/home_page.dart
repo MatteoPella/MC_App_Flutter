@@ -44,6 +44,91 @@ class HomePage extends StatelessWidget {
           ),
 
 
+          Positioned(
+            top: 210,
+            child: Container(
+                width: 360,
+                height: 180,
+                decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0),
+                    shape: BoxShape.rectangle,
+                    boxShadow: [
+                      const BoxShadow(
+                          offset: Offset(10, 10),
+                          color: Colors.black38,
+                          blurRadius: 15),
+                      BoxShadow(
+                          offset: const Offset(-10, -10),
+                          color: Colors.white.withOpacity(0.6),
+                          blurRadius: 15)
+                    ]
+                ),
+                child: null
+            ),
+          ),
+
+          Positioned(
+              top: 200,
+              child: Center(
+                child: Text(
+                  'MIMIC',
+                  style: GoogleFonts.peralta(
+                    fontSize: 70,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              )
+          ),
+
+          Positioned(
+            top: 300,
+            child: Center(
+              child: Text(
+                'PICTURE',
+                style: GoogleFonts.peralta(
+                  fontSize: 70,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            )
+          ),
+
+          /*
+          Positioned(
+            top: 250,
+            child: Container(
+              //width: 120,
+                height: 200,
+                decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0),
+                    shape: BoxShape.rectangle,
+                    boxShadow: [
+                      const BoxShadow(
+                          offset: Offset(10, 10),
+                          color: Colors.black38,
+                          blurRadius: 15),
+                      BoxShadow(
+                          offset: const Offset(-10, -10),
+                          color: Colors.white.withOpacity(0.6),
+                          blurRadius: 15)
+                    ]
+                ),
+                child: Center(
+                  child: Text(
+                    'PICTURE',
+                    style: GoogleFonts.peralta(
+                      fontSize: 70,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+            ),
+          ),*/
+
+
 
           /*
           Positioned(
